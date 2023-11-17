@@ -203,7 +203,7 @@ export async function fetchFilteredCustomers(query: string) {
 		WHERE
 		  customers.name ILIKE ${`%${query}%`} OR
         customers.email ILIKE ${`%${query}%`}
-		GROUP BY customers.id, customers.name, customers.email, customers.image_url
+		GROUP BY customers.id, customers.name, customers.email, customers._url
 		ORDER BY customers.name ASC
 	  `;
 
